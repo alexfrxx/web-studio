@@ -18,6 +18,7 @@ body {
 }
 
 .header {
+  padding: 16px 0;
   border-bottom: 1px solid #e7e9fc;
   box-shadow:
     0 1px 6px rgba(46, 47, 66, 0.08),
@@ -28,6 +29,11 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.header-mobile-btn {
+  border: none;
+  background-color: transparent;
 }
 
 .main-navigation {
@@ -56,7 +62,7 @@ ul {
 }
 
 .navigation-list {
-  display: flex;
+  display: none;
   gap: 40px;
 }
 
@@ -74,8 +80,7 @@ ul {
 }
 
 .contact-list {
-  display: flex;
-  gap: 40px;
+  display: none;
 }
 
 .navigation-link:hover,
@@ -187,7 +192,8 @@ h1 {
 }
 
 .ternary-title {
-  font-size: 20px;
+  font-size: 36px;
+  text-align: center;
   font-weight: 500;
   letter-spacing: 0.02em;
   line-height: 1.2;
@@ -199,11 +205,16 @@ h1 {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 24px;
+  row-gap: 72px;
+  column-gap: 24px;
+}
+
+.features-item {
+  width: 100%;
 }
 
 .features-icons-wrapper {
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
   background-color: #f4f4fd;
@@ -221,7 +232,7 @@ p {
   letter-spacing: 0.02em;
 }
 .section {
-  padding: 120px 0;
+  padding: 96px 0;
 }
 
 .team {
@@ -232,7 +243,8 @@ p {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 24px;
+  column-gap: 24px;
+  row-gap: 72px;
 }
 .team-item {
   background-color: #fff;
@@ -241,6 +253,7 @@ p {
     0 1px 1px rgba(46, 47, 66, 0.16),
     0 2px 1px rgba(46, 47, 66, 0.08);
   max-width: 264px;
+  width: 100%;
   border-radius: 0 0 4px 4px;
 }
 
@@ -326,7 +339,7 @@ p {
 }
 
 .bottom-page {
-  padding: 100px 0;
+  padding: 96px 0;
   background-color: #2e2f42;
 }
 
@@ -335,7 +348,8 @@ p {
 }
 
 .portfolio-item {
-  width: 360px;
+  width: 100%;
+  max-width: 360px;
   border: 1px solid #e7e9fc;
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -357,7 +371,7 @@ p {
 .overlay {
   position: absolute;
   bottom: 0;
-  width: 360px;
+  width: 100%;
   height: 300px;
   background-color: #4d5ae5;
   padding: 40px 32px;
@@ -389,6 +403,7 @@ p {
 
 .socials-title {
   margin-bottom: 16px;
+  text-align: center;
   font-weight: 500;
   line-height: 1.5;
   letter-spacing: 0.02em;
@@ -397,8 +412,11 @@ p {
 
 .footer-container-wrap {
   display: flex;
-  gap: 80px;
-  align-items: baseline;
+  gap: 72px;
+  flex-wrap: wrap;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .icon:hover {
@@ -408,12 +426,14 @@ p {
 .footer-form {
   display: flex;
   gap: 24px;
+  flex-direction: column;
+  align-items: center;
 }
 
 .footer-input {
   padding: 8px 16px;
   outline: none;
-  width: 264px;
+  width: 288px;
   align-self: flex-end;
   height: 40px;
   background-color: transparent;
@@ -708,58 +728,39 @@ textarea:focus {
   fill: #fff;
 }
 
-@media (min-width: 320px) {
-  .footer-form-wrapper {
-    row-gap: 72px;
-    column-gap: 24px;
-    flex-wrap: wrap;
-  }
-  .footer-input {
-    width: 288px;
-  }
-  .bottom-page {
-    padding: 96px 0;
-  }
-  .socials-title {
-    text-align: center;
-  }
-  .footer-form {
-    flex-direction: column;
-    align-items: center;
-  }
-  .footer-container-wrap {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  .features-icons-wrapper {
-    display: none;
-  }
-  .portfolio-item {
-    width: 100%;
-  }
-  .features-list {
-    row-gap: 72px;
-  }
-  .team-item {
-    width: 100%;
-  }
-  .team-list {
-    row-gap: 72px;
-  }
-  .ternary-title {
-    font-size: 36px;
-    text-align: center;
-  }
-  .features-item {
-    width: 100%;
-  }
-  .section {
-    padding: 96px 0;
-  }
+.footer-form-wrapper {
+  row-gap: 72px;
+  column-gap: 24px;
+  flex-wrap: wrap;
 }
 
 @media (min-width: 768px) {
+  .header-mobile-btn {
+    display: none;
+  }
+  .header {
+    padding: 0;
+  }
+  .contact-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .navigation-list {
+    display: flex;
+  }
+  .socials-title {
+    text-align: left;
+  }
+  .footer-form {
+    flex-direction: row;
+  }
+  .footer-container-wrap {
+    flex-direction: row;
+    align-items: baseline;
+    column-gap: 24px;
+    row-gap: 72px;
+  }
   .footer-input {
     width: 264px;
   }
@@ -787,6 +788,13 @@ textarea:focus {
 }
 
 @media (min-width: 1158px) {
+  .contact-list {
+    flex-direction: row;
+    gap: 40px;
+  }
+  .footer-container-wrap {
+    gap: 80px;
+  }
   .bottom-page {
     padding: 100px 0;
   }
