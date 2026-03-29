@@ -123,7 +123,9 @@ ul {
   padding: 188px 0;
   background: rgba(46, 47, 66, 0.7);
   background-image:
-    linear-gradient(rgba(46, 47, 66, 0.7)), url(../images/people-office.jpg);
+    linear-gradient(rgba(46, 47, 66, 0.7)),
+    url(../images/people-office.jpg) 1x,
+    url(../images/people-office2x.jpg) 2x;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
