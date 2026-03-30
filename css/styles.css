@@ -12,7 +12,7 @@ body {
 }
 
 .container {
-  max-width: 1158px;
+  max-width: 768px;
   margin: 0 auto;
   padding: 0 16px;
 }
@@ -152,12 +152,12 @@ img {
   max-width: 100%;
 }
 h1 {
-  max-width: 496px;
+  max-width: 216px;
   font-size: 36px;
   font-weight: 700;
   color: #fff;
   text-align: center;
-  line-height: 1.07;
+  line-height: 1.11111;
   letter-spacing: 0.02em;
   margin-bottom: 72px;
 }
@@ -805,6 +805,12 @@ textarea:focus {
 }
 
 @media (min-width: 768px) {
+  .portfolio-list {
+    row-gap: 72px;
+  }
+  .burger.is-open {
+    display: none;
+  }
   .contact-link {
     font-weight: 400;
     font-size: 12px;
@@ -814,6 +820,7 @@ textarea:focus {
   h1 {
     font-size: 56px;
     margin-bottom: 36px;
+    line-height: 1.07;
   }
   .hero {
     padding: 112px 0;
@@ -869,6 +876,7 @@ textarea:focus {
   }
   h1 {
     font-size: 56px;
+    max-width: 496px;
   }
   .features-item {
     flex-basis: calc((100% - 24px) / 2);
@@ -876,6 +884,9 @@ textarea:focus {
 }
 
 @media (min-width: 1158px) {
+  .portfolio-list {
+    row-gap: 40px;
+  }
   p {
     font-weight: 400;
   }
@@ -938,6 +949,7 @@ textarea:focus {
     padding: 120px 0;
   }
   .container {
+    max-width: 1158px;
     padding: 0 15px;
   }
 }
