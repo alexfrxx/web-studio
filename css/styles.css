@@ -525,10 +525,13 @@ p {
   height: 100%;
   width: 100%;
   background-color: #fff;
-  padding: 72px 16px 40px 16px;
   display: none;
-  flex-direction: column;
-  gap: 48px;
+}
+
+.burger-wrapper {
+  padding: 72px 16px 40px 16px;
+  width: 100%;
+  height: 100%;
 }
 
 .burger-navigation-list {
@@ -539,7 +542,7 @@ p {
 }
 
 .burger-contact-wrap {
-  margin-top: auto;
+  margin-top: 168px;
 }
 
 .burger-link {
