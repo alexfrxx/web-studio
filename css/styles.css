@@ -128,9 +128,9 @@ ul {
 
 .hero {
   padding: 72px 0;
-  background: rgba(46, 47, 66, 0.7);
   background-image:
-    linear-gradient(rgba(46, 47, 66, 0.7)), url(../images/people-office.jpg);
+    linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+    url(../images/people-office.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -452,6 +452,7 @@ p {
 }
 
 .footer-info-wrapper {
+  width: 288px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -774,6 +775,10 @@ textarea:focus {
   fill: #fff;
 }
 
+.footer-socials-wrapper {
+  width: 208px;
+}
+
 .checkbox-input:checked + .checkbox-box {
   background-color: #404bbf;
   border-color: #404bbf;
@@ -828,10 +833,17 @@ textarea:focus {
 .footer-form-wrapper {
   row-gap: 72px;
   column-gap: 24px;
+  width: 288px;
   flex-wrap: wrap;
 }
 
 @media (min-width: 768px) {
+  .footer-form-wrapper {
+    width: 453px;
+  }
+  .footer-info-wrapper {
+    width: 264px;
+  }
   .secondary-logo {
     margin: 0;
   }
