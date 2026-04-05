@@ -129,8 +129,7 @@ ul {
 .hero {
   padding: 72px 0;
   background-image:
-    linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
-    url(../images/people-office.jpg);
+    linear-gradient(rgba(46, 47, 66, 0.7)), url(../images/people-office.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -894,6 +893,8 @@ textarea:focus {
   .footer-container-wrap {
     flex-direction: row;
     align-items: baseline;
+    justify-content: flex-start;
+    padding: 0 108px;
     column-gap: 24px;
     row-gap: 72px;
   }
