@@ -16,6 +16,7 @@ The project was created to practice basic layout, page structure, and styling.
 * HTML5
 * CSS3
 * Flexbox
+* JS
 
 ## 📂 Project Structure
 
